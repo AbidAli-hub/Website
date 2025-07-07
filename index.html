@@ -1,94 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Palestine vs Israel Conflict</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        header, footer {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #b22222;
-        }
-        h2 {
-            color: #444;
-        }
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        img {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            display: block;
-            border-radius: 10px;
-        }
-        footer {
-            font-size: 14px;
-            color: gray;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Palestine vs Israel Conflict</title>
+  <style>
+    :root {
+      --bg: #f4f4f4;
+      --text: #222;
+      --box: #fff;
+      --highlight: #fff0f0;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #f4f4f4;
+      --box: #1e1e1e;
+      --highlight: #2d2d2d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #8b0000, #a83232);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: var(--box);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 25px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .highlight {
+      background-color: var(--highlight);
+      border-left: 5px solid #e74c3c;
+      padding: 15px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .flag {
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #a83232;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: white;
+      color: black;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    body.dark .dark-toggle {
+      background: #2e2e2e;
+      color: #fff;
+    }
+
+    iframe {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Palestine vs Israel Conflict</h1>
-    <p>Understanding the History, Causes, and Impact</p>
+  <h1>Palestine vs Israel Conflict</h1>
+  <p>Understanding History, Human Impact, and Global Reactions</p>
+  <button class="dark-toggle" onclick="toggleDark()">Toggle Dark Mode</button>
 </header>
 
 <section>
-    <h2>📜 Historical Background</h2>
-    <p>
-        The conflict between Israelis and Palestinians began in the early 20th century over land disputes and national identity.
-        After World War I, the British controlled the region of Palestine. The 1917 Balfour Declaration supported a "national home for the Jewish people" in Palestine, which created tension with the Arab population.
-    </p>
+  <h2>📜 Historical Background</h2>
+  <p>
+    The conflict between Palestinians and Israelis began during British rule in the early 1900s. It intensified after the 1947 UN Partition Plan and Israel’s formation in 1948.
+  </p>
+  <img src="palestine vs Israel.jpeg" alt="Map of Conflict" />
+</section>
 
-    <h2>🗓️ Key Events</h2>
+<section>
+  <h2>🗓️ Key Events Timeline</h2>
+  <ul>
+    <li><strong>1948:</strong> Israel declared; 700,000+ Palestinians displaced.</li>
+    <li><strong>1967:</strong> Israel occupies West Bank, Gaza, East Jerusalem.</li>
+    <li><strong>1993:</strong> Oslo Accords signed — partial peace failed.</li>
+    <li><strong>2023–2024:</strong> Gaza escalation — widespread deaths & destruction.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>⚖️ Major Conflict Issues</h2>
+  <div class="highlight">
     <ul>
-        <li><strong>1948:</strong> Israel declared independence; war broke out, and over 700,000 Palestinians were displaced (Nakba).</li>
-        <li><strong>1967:</strong> In the Six-Day War, Israel occupied the West Bank, East Jerusalem, and Gaza Strip.</li>
-        <li><strong>1993:</strong> Oslo Accords aimed to create peace and establish a Palestinian state, but efforts collapsed.</li>
-        <li><strong>2023–2024:</strong> Major violence escalated again, especially in Gaza, with heavy casualties and humanitarian crises.</li>
+      <li>Disputed control of <strong>Jerusalem</strong>.</li>
+      <li>Israeli <strong>settlements</strong> in occupied territories.</li>
+      <li><strong>Blockades</strong> on Gaza Strip.</li>
+      <li>Palestinian calls for <strong>independence</strong> & <strong>right of return</strong>.</li>
     </ul>
+  </div>
+</section>
 
-    <h2>⚖️ Major Issues</h2>
-    <p>
-        The main points of conflict include:
-        <ul>
-            <li>Disputed control of Jerusalem (holy to Jews, Muslims, and Christians)</li>
-            <li>Israeli settlements in the West Bank</li>
-            <li>Gaza blockade and military operations</li>
-            <li>Palestinian demand for independence and right of return</li>
-        </ul>
-    </p>
+<section>
+  <h2>🌍 Global Reactions</h2>
+  <p class="flag">🇮🇷 <strong>Iran:</strong></p>
+  <p>Supports Hamas; condemns Israeli strikes; sends aid and warnings.</p>
 
-    <img src="palestine vs Israel.jpeg">
+  <p class="flag">🇺🇸 <strong>USA:</strong></p>
+  <p>Backs Israel militarily; calls for humanitarian relief for Gaza.</p>
 
-    <h2>💔 Human Impact</h2>
-    <p>
-        Thousands of civilians, including women and children, have been killed or injured. Homes, schools, and hospitals are often damaged in airstrikes.
-        The humanitarian situation in Gaza is severe, with shortages of food, water, electricity, and medical care.
-    </p>
+  <p class="flag">🇹🇷 <strong>Turkey:</strong></p>
+  <p>Strongly supports Palestine; urges ceasefire and justice.</p>
 
-    <h2>🕊️ Hope for Peace</h2>
-    <p>
-        Many international organizations and leaders continue to push for a peaceful solution through diplomacy and a two-state solution.
-        Dialogue, mutual recognition, and respect for human rights are key to ending the cycle of violence.
-    </p>
+  <p class="flag">🇷🇺 <strong>Russia:</strong></p>
+  <p>Pushes peace talks; criticizes Western stance; neutral diplomacy.</p>
+
+  <p class="flag">🇨🇳 <strong>China:</strong></p>
+  <p>Supports ceasefire and two-state solution; provides Gaza aid.</p>
+</section>
+
+<section>
+  <h2>💔 Humanitarian Crisis in Gaza</h2>
+  <p>
+    Massive destruction of civilian homes, hospitals, and schools. Thousands have died. Limited access to food, water, and medical care.
+  </p>
+  <img src="Death image.jpeg" alt="War Destruction">
+  <img src="death count.jpeg" alt="Death Chart">
+</section>
+
+<section>
+  <h2>📺 Video: Understanding the Gaza Conflict</h2>
+  <iframe width="700" height="400" src="gaza conflict.mp4" 
+          title="YouTube video" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section>
+  <h2>📥 Download Summary</h2>
+  <p>You can download a PDF summary of this topic below in more detailed research:</p>
+  <a href="The-Israel-Palestine-conflict.pdf" class="download-btn" download>Download PDF</a>
+</section>
+
+<section>
+  <h2>🕊️ Path to Peace</h2>
+  <p>
+    A two-state solution remains the most discussed plan. It requires international unity, respect for both sides, and long-term peace commitment.
+  </p>
 </section>
 
 <footer>
-    <p>&copy; 2025 | Educational Use Only | Designed by Abid Ali</p>
+  <p>&copy; 2025 | Designed by Abid Ali | For Awareness Only</p>
 </footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle('dark');
+  }
+</script>
 
 </body>
 </html>
