@@ -21,11 +21,14 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       margin: 0;
+      scroll-behavior: smooth;
+      padding-top: 60px;
     }
 
     header {
@@ -130,17 +133,69 @@
       max-width: 100%;
       border-radius: 10px;
     }
+
+    /* Navbar Styles */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #a83232;
+      z-index: 999;
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      margin: 0 15px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffdcdc;
+    }
   </style>
 </head>
 <body>
 
-<header>
+<!-- 🌐 NAVBAR -->
+<nav class="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#history">History</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#issues">Issues</a></li>
+    <li><a href="#reactions">Reactions</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#peace">Peace</a></li>
+  </ul>
+</nav>
+
+<!-- 🌍 HEADER -->
+<header id="home">
   <h1>Palestine vs Israel Conflict</h1>
   <p>Understanding History, Human Impact, and Global Reactions</p>
   <button class="dark-toggle" onclick="toggleDark()">Toggle Dark Mode</button>
 </header>
 
-<section>
+<section id="history">
   <h2>📜 Historical Background</h2>
   <p>
     The conflict between Palestinians and Israelis began during British rule in the early 1900s. It intensified after the 1947 UN Partition Plan and Israel’s formation in 1948.
@@ -148,7 +203,7 @@
   <img src="palestine vs Israel.jpeg" alt="Map of Conflict" />
 </section>
 
-<section>
+<section id="timeline">
   <h2>🗓️ Key Events Timeline</h2>
   <ul>
     <li><strong>1948:</strong> Israel declared; 700,000+ Palestinians displaced.</li>
@@ -158,7 +213,7 @@
   </ul>
 </section>
 
-<section>
+<section id="issues">
   <h2>⚖️ Major Conflict Issues</h2>
   <div class="highlight">
     <ul>
@@ -170,7 +225,7 @@
   </div>
 </section>
 
-<section>
+<section id="reactions">
   <h2>🌍 Global Reactions</h2>
   <p class="flag">🇮🇷 <strong>Iran:</strong></p>
   <p>Supports Hamas; condemns Israeli strikes; sends aid and warnings.</p>
@@ -197,19 +252,19 @@
   <img src="death count.jpeg" alt="Death Chart">
 </section>
 
-<section>
+<section id="video">
   <h2>📺 Video: Understanding the Gaza Conflict</h2>
   <iframe width="700" height="400" src="gaza conflict.mp4" 
           title="YouTube video" frameborder="0" allowfullscreen></iframe>
 </section>
 
-<section>
+<section id="download">
   <h2>📥 Download Summary</h2>
   <p>You can download a PDF summary of this topic below in more detailed research:</p>
   <a href="The-Israel-Palestine-conflict.pdf" class="download-btn" download>Download PDF</a>
 </section>
 
-<section>
+<section id="peace">
   <h2>🕊️ Path to Peace</h2>
   <p>
     A two-state solution remains the most discussed plan. It requires international unity, respect for both sides, and long-term peace commitment.
